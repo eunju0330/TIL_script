@@ -139,7 +139,7 @@ dan99Func(2);//구구단
 console.log(dan99Func(2));
 console.log(dan99Func(7));
 console.log('------------------------할인율 계산기 알고리즘');
-// 27900원을 입력했을 때 (가격은 달라질 수 있음)
+// 27500원을 입력했을 때 (가격은 달라질 수 있음)
 // 입력한 가격에 대한 5%, 10%, 20%, 30%, 40%, 50% 할인율 동시출력
 // 10% 할인율 계산법 : 가격 * 0.9
 // 4% 할인율 계산법 : 100-4 = 96 -> 가격 * 0.96
@@ -154,5 +154,37 @@ function discount(price){
     discountResult += `50% 할인율 결과 : ${price * 0.5}원`;
     return discountResult;
 }
-//discount(27900);
-console.log(discount(27900));
+//discount(27500);
+console.log(discount(27500));
+//----------------------함수 5/20
+console.log('===============익명함수');
+//익명함수란? 변수 내 function 키워드를 지정해 대입하는 함수
+//함수 자체의 이름이 아닌 변수 이름에 의존해서 할당되기 때문에 익명함수라고 부른다.
+//function greeting(){} //일반함수
+const greeting = function(){
+    console.log('hello');
+} //익명함수
+greeting(); //익명함수 호출은 함수명이 아닌 변수명으로 호출한다.
+//익명함수는 일반함수와 다르게 함수선언보다 먼저 호출하면 오류가 발생한다.
+console.log('===============화살표함수ES6이후');
+//화살표 함수는 일반함수가 아닌 익명함수일때 함수를 간결하게 줄이는 목적으로 사용한다.
+//function을 => 기호로 바꿔서 사용한다.
+//대입연산자(=)와 화살표변수(=>)를 붙여서 사용할 수 없기 때문에 매개변수와 함수선언표시 순서를 바꿔서 = () => 로 사용한다.
+//일반함수 경우
+function bab(num){
+    return '밥'+num+'공기 주세요'; //템플릿 문자열
+}
+console.log(bab(1));
+//화살표함수(익명함수) 경우
+const bab2 = (num) => {return '밥'+num+'공기 주세요';}
+console.log(bab2(2));
+//함수 호출할 때마다 아래와 같은 결과 출력하기(매개변수 활용)
+//밥 주세요
+//반찬 주세요
+//국 주세요
+//const 변수 = (매개변수) => {return 함수반환값}
+//변수() // 익명함수호출식
+const meal = (menu) => {return menu+'주세요';}
+console.log(meal('밥'));
+console.log(meal('반찬'));
+console.log(meal('국'));
