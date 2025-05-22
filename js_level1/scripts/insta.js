@@ -27,7 +27,17 @@ function likeOn(){
 //이미지 더블클릭 하기 전 기준
 //위 likeImg 변수 활용(추가 변수x)
 //호출함수 이미 준비됨(likeOn)
-likeImg.addEventListener('click',likeOn);
+//likeImg.addEventListener('click',likeOn);
+//(위) likeImg 클릭 시 실행되는 콜백함수
+//(아래) likeImg객체가 a태그로 클릭 시 새로고침돼서 스크롤이 위로 올라가는 문제 해결을 위한 방법
+//콜백함수 호출이 아닌 익명함수 또는 화살표함수 이용필수
+//익명함수 또는 화살표함수로 작성 시 이벤트 앞 객체정보가 함수의 매개변수로 자동으로 대입된다.
+//위 매개변수가 받은 정보를 확인하려면 매개변수에 변수명(e:이벤트의 약자)을 작성하고 console.log()로 확인할 수 있다.
+likeImg.addEventListener('click',function(e){
+    //console.log(e);
+    e.preventDefault();//태그의 동적기능 취소(a태그새로고침)
+    likeOn();
+});
 
 // 6. 댓글 아이콘 터치 시 댓글 입력창 실행(o)-제작필요, 실행화면에서 바깥쪽 영역 터치하면 댓글 입력창 닫힘(o)
 // 7. 공유 아이콘 터치 시 공유가능 계정들 표시된 창 실행(o)-제작필요, 바깥쪽 영역 터치 시 닫힘(o)
@@ -42,7 +52,7 @@ console.log(storyDOM, dateDOM);
 tagDOM.style.display = 'none';
 //글 클릭 시 태그 표시
 storyDOM.addEventListener('click',tagShow);
-function tagShow (){
+function tagShow(){
     return tagDOM.style.display = 'block';
 }
 
