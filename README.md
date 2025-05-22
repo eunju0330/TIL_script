@@ -13,3 +13,12 @@
 * **객체** : 자바스크립트에서 제어하려는 대상(보통 데이터를 담은 변수가 객체 대상이 되는 경우가 많음)
 * **속성** : 객체가 가진 고유한 속성(객체가 img라면, src, alt가 속성)
 * **함수** : 객체를 이용한 자바스크립트의 실행결과, 뒤에 소괄호()가 붙음.
+## 자바스크립트 DOM 지정규칙
+* HTML태그의 class, name, id, value 등의 이름 규칙 : 영어소문자_영어소문자 (예) `user_id`
+* Javascript의 함수 및 변수 이름 규칙 : Camel표기법 (예) `userId`
+### 변수 등록 시 순서
+* const 의미있는변수명 = document.querySelector('HTML요소 또는 클래스, 아이디, 속성선택자 등')`
+* `const userId = document.querySelector('.user_id');`
+* `let liActive = document.querySelector('li.active');` 
+* `var pwIO = document.querySelector('input[type*=pass]')`
+* `let genderChk = document.querySelector('input[name=gender]');`

@@ -13,7 +13,6 @@ console.log(buyBtn);//변수정상확인
 function userOrderMsg(){
     return console.log('회원만 주문가능합니다. 로그인해주세요');
 }
-
 const payBtn = document.querySelector('#payBtn');
 console.log(payBtn);
 //결제하기 클릭 시 '결제 완료되었습니다' 출력 알고리즘
@@ -142,6 +141,6 @@ function numPlus(){
     //1. 증감연산자 활용법
     //return numInput.value = ++numInput.value;
     //2. 더하기연산자와 형변환메서드 활용법
-    console.log(typeof numInput.value);
+    console.log(typeof numInput.value); 
     return numInput.value = Number(numInput.value)+1;
 }
