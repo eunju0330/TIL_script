@@ -27,3 +27,6 @@
 * **해결법** : 이벤트함수 내에 익명함수 및 화살표함수를 작성하고 매개변수에 `e` 작성 후 함수 실행 내에 `e.preventDefault()`를 작성한다.
 * (예) `a객체.addEventListener('click',function(e){ e.preventDefault(); })`
 * (예) `a객체.addEventListener('click',(e)=>e.preventDefault())`
+## 태그(DOM)에 따른 속성 값 읽기/수정/삭제 JS속성
+* input 요소일 경우 값 읽기/수정/삭제는 value 속성 사용
+* input이 아닌 다른 요소일 경우 값 읽기/수정/삭제 `textContent` 또는 `innerHTML` 속성 사용

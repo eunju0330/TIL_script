@@ -1,17 +1,40 @@
 body, html {padding:0 10px; background-color:#f5f5f5;}
-main {
+main { 
     max-width:420px; min-width:320px; margin:30px auto 0;
-    background-color:lightblue;
+    border:1px solid red; padding:50px 10px 500px;
+    background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center / cover no-repeat;
+    text-align:center;
 }
 main h1 {font-size:0.75rem;}
-main h1 p {color:red;}
-main .info {border:2px solid coral;}
-main .info li {}
+main p:first-of-type {
+    margin:10px 0;
+}
+main .info {
+    margin:10px 0;
+    padding:20px;
+    margin:0 auto;
+}
+main .info li {
+    margin-bottom:5px;
+
+}
 main .info li span {font-size:0.75rem;}
-main .info li input[name*=height] {}
-main .info li input[name*=weight] {}
+main .info li input {
+    width:120px;
+    height:20px;
+}
+main .info li input[name*=height] {
+    border-radius:20px;
+    padding:10px 5px;
+}
+main .info li input[name*=weight] {
+    border-radius:20px;
+}
 main #result_btn {
     font-size:0.75rem;
     border:1px solid #eee; border-radius:20px; padding:5px 10px;
+    margin-bottom:10px;
 }
-main #result {}
+main #result {font-size:0.688rem; line-height:1.5;}
+/* 자바스크립트에서 동적으로 생성한 HTML 꾸미기 속성 */
+main #result em {color:#f00;}
