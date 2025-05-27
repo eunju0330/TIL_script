@@ -18,14 +18,21 @@ thumbNailA[0].addEventListener('click',function(){
     console.log(this);//이벤트객체자동인식하는지 확인
     console.log(this.children[0].src);
     console.log(popupBg.children[0].children[0].src);//팝업bg의 자식의 자식의 src확인
-    popupShow();//팝업 출력 함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    popupShow(this);//팝업 출력 함수 호출
 })
-thumbNailA[1].addEventListener('click',popupShow)
-thumbNailA[2].addEventListener('click',popupShow)
+thumbNailA[1].addEventListener('click',function(){
+    popupShow(this);//팝업 출력 함수 호출
+})
+thumbNailA[2].addEventListener('click',function(){
+    popupShow(this);//팝업 출력 함수 호출
+})
 popupBg.addEventListener('click',popupHide)
-function popupShow(){
-    return popupBg.style.display = 'flex';
+function popupShow(target){
+    console.log('--------------함수시작위치와 에러체크')
+    console.log(popupBg.children[0]); //정상체크
+    popupBg.style.display = 'flex';
+    popupBg.children[0].children[0].src = target.children[0].src
+    return; //함수 종료
 }
 function popupHide(){
     return popupBg.style.display = 'none';
