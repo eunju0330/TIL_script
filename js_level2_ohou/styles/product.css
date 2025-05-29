@@ -1,3 +1,4 @@
+body, html {scroll-behavior:smooth;}
 main {
     background:aqua;
     width:995px; margin:0 auto;
@@ -28,9 +29,7 @@ main section .left_thumnail .big {
 main section .left_thumnail .big img {}
 main section .right_order {background:lime;}
 main section .right_order > * {margin-bottom:25px; background:yellow;}
-main section .right_order .brand {
-    margin-bottom:25px;
-}
+main section .right_order .brand {}
 main section .right_order h1 {}
 main section .right_order .review {}
 main section .right_order .review .score {}
@@ -72,6 +71,14 @@ main section .right_order .product_option select[name=color] {
 main section .right_order .product_option select[name=color] option {}
 main section .right_order .product_option select[name=size] {}
 main section .right_order .product_option select[name=size] option {}
+main section .right_order .order_select {}
+main section .right_order .order_select .list {}
+main section .right_order .order_select .list .color {}
+main section .right_order .order_select .list .size {}
+main section .right_order .order_select .close {}
+main section .right_order .order_select .order_num {}
+main section .right_order .order_select .order_num button[name=minus]{}
+
 main section .right_order .total {}
 main section .right_order .total p {}
 main section .right_order .total .price {}
@@ -91,3 +98,6 @@ main section .right_order .btn_group #cart_btn {
 main section .right_order .btn_group #buy_btn {
     background:#59AFFF; color:#fff;
 }
+main .info {height:100vh;}
+main #review {height:100vh; background:yellow;}
+main .board {height:100vh;}
