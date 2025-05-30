@@ -6,8 +6,8 @@
     <title>몽셸 패딩 하네스 올인원 6size 3colors | 오늘의 집</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/product.css">
-    <script src="./scripts/product.js" defer></script>
     <script src="./scripts/thumnails.js" defer></script>
+    <script src="./scripts/product.js" defer></script>
 </head>
 <body>
     <main>
@@ -66,6 +66,7 @@
                         <option value="">색상</option>
                         <option value="black">블랙(39,900원)</option>
                         <option value="raspberry">라즈베리(39,900원)</option>
+                        <option value="">그레이(39,900원)(품절)</option>
                     </select>
                     <select name="size">
                         <option value="">사이즈</option>
@@ -82,9 +83,9 @@
                     </p>
                     <a href="#" class="close">X</a>
                     <div class="order_num">
-                        <button type="button" name="minus">-</button>
+                        <button type="button" id="minus">-</button>
                         <input type="number" value="1" name="user_num">
-                        <button type="button" name="plus">+</button>
+                        <button type="button" id="plus">+</button>
                     </div>
                     <p class="price"><em>39,900</em>원</p>
                 </div>
