@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 복습 + 블로그</title>
+    <style>
+        #bg {
+            background:url(https://files.grafolio.ogq.me/real/5e449cdd62468/IMAGE/458c6f53-c3d1-4a45-ad51-9afec28bbd47.jpeg) center / cover;
+            width:100%; height:100vh;
+            /* 배경이미지 */
+        }
+        #bg .gradient {
+            width:100%; height:100vh;
+            background: #34d6f7;
+            background: linear-gradient(90deg, rgba(52, 214, 247, 1) 0%, rgba(207, 255, 166, 0.7) 50%, rgba(255, 173, 173, 0.7) 100%);
+            /* 그라디언트 색상 */
+        }
+        #bg .gradient section {
+            /* a, b 두개의 요소를 grid로 정렬하고 싶다면 그 부모(section)에게 명령 */
+            display:grid;/* 그리드 필수 선언 */
+            /* grid-template-columns:100px 200px; *//* 1열, 2열 순서대로 자식 너비지정 */
+            /* grid-te */
+            grid-template-columns:200px 1fr;
+            /* 1열 2열 반복(repeat)적용 최소(min) 200, 최대(max) auto 100% 같이 인식 */
+            /* grid-template-rows:300px 100px; */ /* 1행 300, 2행 100px 자식의 높이 지정 */
+            grid-template-rows:repeat(2, 100px); /* 2행 100px반복 */
+        }
+        #bg .gradient section > div {
+            /* width:100px; height:100px; */
+            /* 부모에 grid로 열, 행 크기 입력 시 자식에는 별도로 크기를 입력하면 안된다. */
+            border:5px solid #fff;
+        }
+        #bg .gradient section .a {}
+        #bg .gradient section .b {}
+        #bg .gradient section > div svg {width:24px;}
+        .box {
+            display:grid;
+            grid-template-areas:
+                'list1 list2 list3'
+                'list4 list5 list6';
+            grid-template-columns:repeat(3, 100px);
+            grid-template-rows:100px 200px;
+            gap:10px 20px;
+        }
+        .box li {border:2px solid #000;}
+        /* 그리드 개별 아이템 이름 명칭 */
+        .box li:nth-child(1) {grid-area:list1}
+        .box li:nth-child(2) {grid-area:list2}
+        .box li:nth-child(3) {grid-area:list3}
+        .box li:nth-child(4) {grid-area:list4}
+        .box li:nth-child(5) {grid-area:list5}
+        .box li:nth-child(6) {grid-area:list6}
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div id="bg">
+        <div class="gradient">
+            <section>
+                <div class="a">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                </div>
+                <div class="b">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M272 96c26.5 0 48-21.5 48-48S298.5 0 272 0s-48 21.5-48 48 21.5 48 48 48zM113.7 317.5l-14.8 34.5H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h77.5c19.3 0 36.6-11.4 44.1-29.1l8.8-20.5-10.7-6.3c-17.3-10.2-30.1-25.4-38-42.6zM384 224h-44l-26.1-53.3c-12.5-25.6-35.5-44.2-61.8-50.9l-71.1-21.1c-28.3-6.8-57.8-.6-80.8 17.1l-39.7 30.4c-14 10.8-16.7 30.8-5.9 44.9s30.8 16.7 44.9 5.9l39.7-30.4c7.7-5.9 17.4-8 25.3-6.1l14.7 4.4-37.5 87.4c-12.6 29.5-1.3 64 26.3 80.3l85 50.2-27.5 87.7c-5.3 16.9 4.1 34.8 21 40.1 3.2 1 6.4 1.5 9.6 1.5 13.6 0 26.2-8.8 30.5-22.5l31.6-101.1c5.9-20.8-2.9-43.1-21.6-54.4l-61.2-36.1 31.3-78.3 20.3 41.4c8 16.3 24.9 26.9 43.1 26.9H384c17.7 0 32-14.3 32-32s-14.3-32-32-32z"/></svg>
+                </div>
+                <div class="c">
+                    <button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
