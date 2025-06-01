@@ -1,0 +1,49 @@
+/* index.css */
+main {
+    background-image: url(../images/flower_bg.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    width:600px; height:800px;
+    margin:0 auto;
+    text-align:center;
+    display:grid;
+    place-items:center;
+}
+main .user_birthdate {
+    display:inline-block;
+}
+main .user_birthdate h1 {
+    color:#fff;
+    margin-bottom:30px;
+    font-size:1.375rem;
+}
+main .user_birthdate input {
+    width:70px;
+    margin:0 4px;
+}
+main .user_birthdate input[name$=year] {
+}
+main .user_birthdate input[name$=month] {}
+main .user_birthdate input[name$=day] {}
+main .user_birthdate span {
+    color:#fff;
+    font-size:1.063rem;
+}
+main .user_birthdate #result_btn {
+    margin:20px 0 40px;
+    background:#df6060;
+    border-radius:20px;
+    width:400px; height:45px;
+    color:#fff;
+    font-weight:300;
+}
+main .user_birthdate #result {
+    background:rgba(255,255,255,0.8);
+    color:#000;
+    font-size:1.125rem;
+    padding:30px;
+    display:none;
+    width:500px;
+    margin:0 auto;
+}
