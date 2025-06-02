@@ -1,6 +1,3 @@
-const birthMonth = document.querySelector('input[name$=month]');
-const resultBtn = document.querySelector('#result_btn');
-const result = document.querySelector('#result');
 const birthday_flower = [
     {
         month:1,
@@ -52,14 +49,3 @@ const birthday_flower = [
         content:'축하, 감사'
     }
 ]
-console.log(birthMonth, resultBtn, result, birthday_flower);
-resultBtn.addEventListener('click', flowerResult);
-function flowerResult() {
-    const month = birthMonth.value;
-    if (month == 12) {
-        const flowerInfo = birthday_flower[11].flower;
-        const flowerMean = birthday_flower[11].content;
-        result.textContent = `${month}월의 탄생화는 ${flowerInfo}이고 꽃말은 ${flowerMean}입니다.`;
-        result.style.display = 'block';
-    }
-}

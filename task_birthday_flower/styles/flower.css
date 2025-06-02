@@ -7,30 +7,32 @@ main {
     width:600px; height:800px;
     margin:0 auto;
     text-align:center;
-    display:grid;
-    place-items:center;
+    display:flex; 
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
 }
-main .user_birthdate {
+main .date {
     display:inline-block;
 }
-main .user_birthdate h1 {
+main .date h1 {
     color:#fff;
     margin-bottom:30px;
     font-size:1.375rem;
 }
-main .user_birthdate input {
+main .date input {
     width:70px;
     margin:0 4px;
 }
-main .user_birthdate input[name$=year] {
+main .date input[name=year] {
 }
-main .user_birthdate input[name$=month] {}
-main .user_birthdate input[name$=day] {}
-main .user_birthdate span {
+main .date input[name=month] {}
+main .date input[name=day] {}
+main .date span {
     color:#fff;
     font-size:1.063rem;
 }
-main .user_birthdate #result_btn {
+main #result_btn {
     margin:20px 0 40px;
     background:#df6060;
     border-radius:20px;
@@ -38,12 +40,11 @@ main .user_birthdate #result_btn {
     color:#fff;
     font-weight:300;
 }
-main .user_birthdate #result {
+main .total {
     background:rgba(255,255,255,0.8);
     color:#000;
     font-size:1.125rem;
     padding:30px;
-    display:none;
     width:500px;
     margin:0 auto;
 }
