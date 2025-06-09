@@ -1,0 +1,60 @@
+header {
+    width:100%; min-width:320px; height:98px;
+    background-color:rgb(69,101,245);
+    padding:0 30px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+header h1 {}
+header h1 a {color:#fff;}
+header nav {}
+header nav .gnb {display:flex; background:brown;}
+header nav .gnb > li {position:relative;}
+header nav .gnb > li > a {
+    padding-right:80px;
+    display:block; line-height:98px; color:#fff; font-weight:600;
+}
+header nav .lnb_bg {
+    background:#eee; height:400px; width:100%;
+    position:absolute; left:0; top:98px; z-index:100;
+    border-bottom-right-radius:45px;
+    border-bottom-left-radius:45px;
+    border-top:2px solid #000; 
+}
+header nav .gnb > li > .lnb {
+    position:absolute; z-index:200;
+    border-right:1px solid #000;
+    height:300px; width:100%;
+}
+header nav .gnb > li > .lnb li {}
+header nav .gnb > li > .lnb li a {}
+header .right_menu {display:flex;}
+header .right_menu > * {margin-left:20px;}
+header .right_menu a {color:#fff;}
+header .right_menu .family {}
+header .right_menu .lang {}
+header .right_menu .lang a {}
+header .right_menu .lang .active {}
+header .right_menu .m_nav {}
+header .right_menu .m_nav_wrap {
+    position:absolute; left:0; top:0;
+    width:100%; height:100vh; margin:0;
+    background:#fff; z-index:999;
+}
+header .right_menu .m_nav_wrap * {color:#000;}
+header .right_menu .m_nav_wrap .top {
+    height:98px; padding:0 30px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+header .right_menu .m_nav_wrap .top h1 {}
+header .right_menu .m_nav_wrap .top h1 a {}
+header .right_menu .m_nav_wrap .top .close {}
+header .right_menu .m_nav_wrap .m_nav_open {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb {
+    background:yellow;
+}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > a {
+}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > .lnb {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > .lnb li {}
+header .right_menu .m_nav_wrap .m_nav_open .gnb > li > .lnb li a {}
