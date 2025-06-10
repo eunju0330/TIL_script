@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수업시작일 계산기</title>
+    <style>
+        main {
+            text-align:center;
+        }
+        main h1 {
+            margin-top:150px;
+            margin-bottom:20px;
+            font-size:1.375rem;
+            font-weight:700;
+            color:#fff;
+            display:inline-block;
+            background-color:#6d2eff;
+            padding:13px 20px;
+            border-radius:50px;
+        }
+        main .photo {}
+        main .photo img {width:300px;}
+        main span {
+            font-weight:500; font-size:1.125rem;
+            display:block;
+            margin:20px;
+        }
+        main #studydate {
+            border:1px solid #6d2eff;
+            padding:5px 15px;
+            border-radius:20px;
+        }
+        main #study_btn {
+            background:#6d2eff;
+            padding:10px 15px;
+            border-radius:20px;
+            color:#fff
+        }
+        main .result * {
+            margin-top:15px;
+        }
+        main .result .date {}
+        main .result .date em {}
+        main .result .time {}
+        main .result .time em {}
+    </style>
+    <link rel="stylesheet" href="../js_level1/styles/reset.css">
+    <script src="./scripts/Math_ex.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>수업시작일부터 경과 시간 계산기</h1>
+        <p class="photo"><img src="./images/photo3.jpg" alt=""></p>
+        <span>날짜를 선택하세요</span>
+        <input type="date" id="studydate" name="studydate">
+        <button type="button" id="study_btn">계산</button>
+
+        <div class="result">
+            <p class="date">경과 날짜 : <em></em>일</p>
+            <p class="time">경과 시간 : <em></em>시간</p>
+        </div>
+    </main>
+</body>
+</html>

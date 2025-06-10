@@ -21,20 +21,20 @@ toBtn.addEventListener('click',()=>{
         console.log(li);//<li></li>
         ul.appendChild(li)
         toInput.value = ''; //입력값 초기화
-    }
 //등록된 할일 옆 X 클릭 시 부모 li 제거
         const close = document.querySelectorAll('.del_btn');
         for(let i of close){
             console.log(i);//배열 형태가 아닌 객체형태로 출력되서 바로 사용가능한 형태인지 확인
-            i.addEventListener('click', () => {
+            i.addEventListener('click', ()=>{
                 i.parentNode.remove();
-        });
-    }
+            })
+        }
         const span = document.querySelectorAll('li span');
         for(let i of span){
             console.log(i);
-            i.addEventListener('click',() => {
+            i.addEventListener('click',()=>{
                 i.parentNode.style.textDecoration = 'line-through';
-        });
+            })
+        }
     }//조건문 else(거짓) 사용자가 값을 입력했을 때 블록 위치
 });//toBtn 이벤트 종료(블록)위치
