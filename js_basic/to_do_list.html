@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 할일</title>
+    <style>
+        main {
+            background:#f0ff6c;; width:500px; height:800px;
+        }
+        main h1 {
+            font-size:1.125rem;
+            font-weight:700;
+            margin-bottom:30px;
+        }
+        main ul {}
+        main ul * {}
+        main ul li {
+            display:flex; justify-content:space-between; align-items:center;
+        }
+        main ul li span {}
+        main ul li span  .del_btn {}
+        main .input_btn {}
+        main .to {}
+        main #to_btn {}
+    </style>
+    <link rel="stylesheet" href="../js_level1/styles/reset.css">
+    <script src="./scripts/to_do_list.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>오늘의 할일</h1>
+        <ul>
+            <li><span>여기에 할 일이 등록됩니다.</span><button type="button" class="del_btn">X</button></li>
+        </ul>
+        <div class="input_btn">
+            <input type="text" class="to" name="to" placeholder="할일을 입력하세요">
+            <button type="button" id="to_btn">등록</button>
+        </div>
+    </main>
+</body>
+</html>
