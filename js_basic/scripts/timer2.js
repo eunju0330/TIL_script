@@ -1,13 +1,13 @@
-let num = 0; //0, 400, 800 출력을 위한 숫자변수
+let num = 2; //0, 400, 800 출력을 위한 숫자변수
 const slideContainer = document.querySelector('.slide_container');
 slideContainer.style.transition = 'transform 0.3s'
 
 const slideTimer = setInterval(()=>{
     num++;
-    if(num<2){num=0}
+    if(num>2){num=0}
     slideContainer.style.transform = `translatex(-${400*num}px)`
     console.log(`현재 num:${num}, x축값:${400*num}`)
-},3000)
+},1000)
 
 
 /* setInterval(numTimer, 2000)
