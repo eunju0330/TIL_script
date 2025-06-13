@@ -3,8 +3,8 @@ const slideContainer = document.querySelector('.slide_container');
 slideContainer.style.transition = 'transform 0.3s'
 
 const slideTimer = setInterval(()=>{
-    num++;
-    if(num>2){num=0}
+    num--;
+    if(num<0){num=2}
     slideContainer.style.transform = `translatex(-${400*num}px)`
     console.log(`현재 num:${num}, x축값:${400*num}`)
 },1000)
