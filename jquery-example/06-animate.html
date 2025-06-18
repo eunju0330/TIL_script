@@ -16,7 +16,7 @@
     #flashSaleBanner {
       position: fixed;
       top: 20px;
-      right: 0; /* 초기 위치 */
+      right: -300px; /* 초기 위치(너비만큼 숨기기) */ /* right 너비값w만큼 음수로 넣으면 아예 화면에서 사라짐 */
       width: 300px;
       padding: 20px;
       background-color: #e74c3c;
@@ -48,11 +48,34 @@
   </main>
   
   <!-- Flash Sale 배너 (초기에는 화면 오른쪽 바깥에 위치) -->
-  <div id="flashSaleBanner">
+  <div id="flashSaleBanner"><!-- 제어대상 -->
     <h2>Flash Sale!</h2>
     <p>모든 상품 20% 할인! 한정 기간 동안 진행됩니다.</p>
     <button id="closeBanner"  type="button">닫기</button>
   </div>
+  <script>
 
+    const $bnr = $('#flashSaleBanner');
+    const $closeBnr = $('#closeBanner');
+    console.log($bnr, $closeBnr);
+
+    //사용자 접속 시 1초 후 팝업 나타나기
+    //setInterval 매초반복
+    //setTimeout 한번실행
+    const bnrTimer = setTimeout(() => {
+      //$DOM.anime({속성:값},지속시간)
+      $bnr.animate({/* transition 속성없이 애니메이션 가능함수 animate */
+        right: '0'
+      }, 500);
+    }, 1000);
+
+    $closeBnr.click(()=>{
+      $bnr.animate({
+        right:'-300px',
+      },1200)
+    })
+
+  
+  </script>
 </body>
 </html>
